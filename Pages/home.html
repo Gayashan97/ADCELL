@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ADCELL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/external.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+    <style>
+
+        article {
+            padding: 3%;
+        }
+
+        h1 {
+            font-family: "Segoe UI Semibold";
+            font-size: 38px;
+            margin: 0%;
+        }
+
+        .rightbar{
+            height: 100%;
+        }
+
+        .rightbar-topic{
+            color: #ffffff;
+            font-size: 28px;
+            margin: 2.5% 2.5% 5% 2.5%;
+            text-transform: uppercase;
+        }
+
+        .news{
+            margin: 2.5% 2.5% 5% 2.5%;
+            width: 95%;
+            height: 8.5%;
+            align-self: center;
+            transition: 0.2s;
+        }
+
+        .news:hover{
+            margin: 2% 2% 5% 2%;
+            width: 96%;
+            height: 8.7%;
+            box-shadow: 0px 2px 20px black;
+            transition: 0.2s;
+            cursor: pointer;
+        }
+
+        .newsimg{
+            width: 100%;
+        }
+
+        .newsimg img{
+            width: 100%;
+            height: auto;
+        }
+
+        .headline{
+            margin: 0;
+            font-size: 12px;
+            color: #ffffff;
+            padding: 5px;
+        }
+        iframe{
+            margin: 0 14% 0 14%;
+        }
+
+        .gif{
+            padding-left: 165px;
+        }
+
+        #members > #membercontainer > .img{
+            border-radius: 100%;
+            border: 2px white solid;
+            height: 125px;
+            width: 150x;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        #membercontainer{
+            background-color: #201D1D;
+            margin-left:25px;
+            text-align: center;
+            padding: 10px;
+           
+        }
+
+        .details{
+            width: 220px;
+            float: left;
+            display: none;
+            text-align: center;
+            margin-top: 10px;
+            border-radius: 15px;
+            background-color: maroon;
+        }
+
+        #members{
+            height: 225px;
+        }
+
+        #main{
+            margin-left: 10.6%;
+        }
+
+        #stu2{
+            margin-left: 21%;
+        }
+
+        #stu3{
+            margin-left: 42%;
+        }
+
+        #stu4{
+            margin-left: 63%;
+        }
+
+
+    </style>
+
+</head>
+
+<body background="../Images/background.jpg" >
+
+   
+
+    
+    <div class="header_logo-box">
+        <a href="home.html"><img src="../Images/Logo.png" alt="Logo" class="header_logo"></a>
+    </div>
+
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+
+    <section class="content">
+        <header>
+            <!-- navigation menu goes here -->
+            <nav class="navigation" >
+                <div class="leftnav" id="nav">
+                    <a href="home.html" class="bak">Home</a>
+                    <a href="store.html" class="active">Store</a>
+                    <a href="quiz.html" class="active">Quiz</a>
+                    <a href="images.html" class="active">Images</a>
+                    <a href="feedback.html" class="active">Feedback</a>
+                    <a href="about.html" class="active">About</a>
+                </div>
+
+                <div class="rightnav">
+                    <button><img class="fonticon" id="fonticon1" src="../Icons/baseline_format_color_text_white_18dp.png"></button>
+                    <button><img class="fonticon" id="fonticon2" src="../Icons/baseline_format_color_text_white_18dp.png"></button>
+                </div>
+
+            </nav>
+            
+                
+        </header>
+
+    
+        <section class="main_img">
+            <div class="img">
+                <img id="image" src="../Images/earth-moon-crater.jpg" alt="Image of an earth-moon-crater">
+            </div>
+        </section>
+
+        <!-- right side panel to show recent news article -->
+        <div class="rightbar">
+            <label class="rightbar-topic">Recent</label>
+            <div class="news" name="news1" onclick="clickNews1()">
+                <div class="newsimg">
+                    <img src="../Images/earth-moon-crater.jpg">
+                    <p class="headline">The moon’s craters suggest Earth hasn’t erased lots of past impacts...</p>
+                </div>
+            </div>
+
+            <div class="news" id="news" name="news2" onclick="clickNews2()">
+                <div class="newsimg">
+                    <img id="photo" src="../Images/trex.jpg">
+                    <p class="headline">A new T. rex exhibit takes a deep dive into the iconic dinosaur...</p>
+                </div>
+            </div>
+
+            <div class="news" id="news" name="news3" onclick="clickNews3()">
+                <div class="newsimg">
+                    <img id="photo" src="../Images/robotgripper.jpg">
+                    <p class="headline">An origami design helps this robot lift delicate and heavy cargo...</p>
+                </div>
+            </div>
+
+            <div class="news" id="news" name="news4" onclick="clickNews4()">
+                <div class="newsimg">
+                    <img src="../Images/geneediting.jpg">
+                    <p class="headline">Geneticists push for a 5-year global ban on gene-edited babies...</p>
+                </div>
+            </div>
+            
+            <div class="news" id="news" name="news5" onclick="clickNews5();" >
+                <div class="newsimg">
+                    <img src="../Images/yellowstone.jpg">
+                    <p class="headline">‘Epic Yellowstone’ captures the thriving ecosystem of the world-famous park...</p>
+                </div>
+            </div>
+            
+            <div class="news" id="news" name="news6" onclick="clickNews6();" >
+                <div class="newsimg">
+                    <img src="../Images/shrimp.jpg">
+                    <p class="headline">Some shrimp make plasma with their claws. Now a 3-D printed claw can too...</p>
+                </div>
+            </div>
+
+            <div class="news" id="news" name="news7" >
+                <div class="newsimg">
+                    <img src="../Images/nano.jpg">
+                    <p class="headline">Nanosponges sop up toxins and help repair tissues...</p>
+                </div>
+            </div>
+
+            <div class="news" id="news" name="news8" >
+                <div class="newsimg">
+                    <img src="../Images/jaw.jpg">
+                    <p class="headline">The rise of farming altered our bite and changed how people talk...</p>
+                </div>
+            </div>
+
+            <div class="news" id="news" name="news9" >
+                <div class="newsimg">
+                    <img src="../Images/ai.jpg">
+                    <p class="headline">Nine companies are steering the future of artificial intelligence...</p>
+                </div>
+            </div>
+
+            <div class="news" id="news" name="news10" >
+                <div class="newsimg">
+                    <img src="../Images/protests.jpg">
+                    <p class="headline">Students worldwide are striking to demand action on climate change...</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- The news article goes here -->
+        <article id="article">
+            <h1 id="mainheading">The moon’s craters suggest Earth hasn’t erased lots of past impacts</h1>
+            <p>A new look at the moon’s craters suggests the Earth and moon both suffered a sharp increase in impacts around 290 million years ago, and Earth has kept its biggest scars.</p>
+            <p>Geologists long assumed that erosion and tectonic activity had erased Earth’s craters so thoroughly that “you couldn’t say anything about the craters on Earth at all,” says planetary scientist Rebecca Ghent (SN: 12/22/18, p. 40). So to figure out how much Earth was pummeled in the past, Ghent and her colleagues turned to the moon.</p>
+            <p>“We can use our closest neighbor to learn a lot more about the Earth’s history,” says planetary scientist Sara Mazrouei, who worked on the study as a graduate student under Ghent at the University of Toronto.  </p>
+            <p>With no atmosphere and no plate tectonics, the moon’s surface preserves a record of nearly all of its 4.5 billion years of craters. If the moon sat through a hailstorm of impacts, Earth should have experienced the same storm, and therefore the same rate of cratering, the researchers argue in the Jan. 18 Science. But without knowing how old most lunar craters are, it’s unclear if the Earth and the moon suffered impacts constantly or in short bursts.</p>
+            <p>Ghent realized in 2014 that the youngest craters on the moon were surrounded by large rocks, debris excavated by the impact that formed the crater (SN: 4/14/18, p. 32). Those large rocks absorb heat from the sun during the lunar day and radiate it back out at night in wavelengths of light visible to NASA’s Lunar Reconnaissance Orbiter.</p>
+            <p>“Right away you could see the young craters popping out,” Ghent says. Older craters, by contrast, were surrounded by rocks that had been beaten down to dust over time, so they didn’t glow as brightly at night.</p>
+
+            <iframe width="40%" height="315" src="https://www.youtube.com/embed/ANYxkwvb8pc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            <p>Ghent used nine craters whose ages were already known to figure out a mathematical relationship between a crater’s nighttime glow and its age. Then Mazrouei, working by hand, mapped all 111 lunar craters less than a billion years old and wider than 10 kilometers in diameter, and used that map to figure out the cratering rate.</p>
+            <p>Most lunar scientists assumed that, after an early turbulent period of extreme bombardment more than 3 billion years ago, the moon’s impact rate has been mostly constant. “But we saw an increase,” Mazrouei says — specifically, a jump in impacts by a factor of 2.6 around 290 million years ago.</p>
+            <p>The team then compared the lunar craters’ sizes and ages with 38 of the largest and most stable craters on the Earth. They lined up almost exactly in their timing and sizes.</p>
+            <p>To double check that such large craters on Earth weren’t often erased by erosion, the researchers looked at volcanic features called kimberlite pipes near the craters. These carrot-shaped lava tubes change starkly in appearance when eroded. The kimberlite pipes that appeared on the same terrain as the large craters confirmed that very little of either feature had been lost to erosion, Ghent says.</p>
+            <p>The jump in the impact rate could have been caused by a smash-up in the asteroid belt sending debris toward the inner solar system, says coauthor William Bottke, a planetary scientist at the Southwest Research Institute in Boulder, Colo. In 2007, Bottke linked one such asteroid break-up to the impact that killed the dinosaurs (SN: 9/8/07, p. 148).</p>
+            <p>Ghent cautions against drawing conclusions about an exact date for that spike in impacts, noting it could have happened tens of millions of years earlier or later than estimated, or in multiple spurts. “I don’t want people to say, ‘Hey, the Permian-Triassic extinction happened during that time. This might have caused it.’ We don’t know that,” she says.</p>
+            <p>The new finding offers an explanation for a gap in Earth’s craters between 300 million and 650 million years old, Bottke says. “We don’t see fewer craters because of erosion,” he says. “We see fewer craters because the impact flux was lower.”</p>
+            <p>But the craters’ longevity raised another question. While the moon’s craters date back billions of years, Earth has almost no preserved craters older than about 650 million years. That makes sense if craters are lost constantly to erosion. But if not, where did the older craters go?</p>
+            <p>Older craters could have been scraped away during a global glacial period called Snowball Earth, Bottke says. Other lines of geological evidence suggest Earth went through deep freezes, the last of which occurred about 650 million years ago.</p>
+            <p>Other planetary scientists not involved in the study expressed mixed reactions about its methodology and findings.</p>
+            <p>“That is a major step forward in our understanding of the impact flux in the inner solar system,” says planetary scientist Christian Koeberl of the University of Vienna. “Their method is interesting and new.”</p>
+            <p>Geologists Thomas Kenkmann and Stefan Hergarten of the University of Freiburg in Germany are more skeptical. In 2015, the duo showed that many of Earth’s craters could still be undiscovered (SN: 7/25/15, p. 5). They’re not convinced that the new study captured all craters, or that Earth’s crater count reflects an increase in impact rate 290 million years ago. It could just be that “younger craters are more likely to have survived,” Hergarten says. “The dataset is really small, so I would not trust in it too much.”</p>
+            <p>Kenkmann agrees. “Considering the low number of craters for the lunar calculation, and the vague interpretation of the terrestrial record, it appears that a house of cards is being built here.”</p>
+
+        </article>
+
+        <div>
+            <a href="../CVs/student2_cv.html"><span class="creator">Creator: Student 2</span></a>
+        </div>
+        
+        <!-- fixed footer goes from here -->
+        <footer class="footer-distributed">
+
+                <div id="members">
+                        <div id="membercontainer">
+                            <img src="../Images/gihan.png" alt="Student 1 Details" class="img" onmouseover="stu1()" onmouseout="ostu1()">
+                            <img src="../Images/ruvi.png" alt="Student 2 Details" class="img" onmouseover="stu2()" onmouseout="ostu2()">
+                            <img src="../Images/gayashan.png" alt="Student 3 Details" class="img" onmouseover="stu3()" onmouseout="ostu3()">
+                            <img src="../Images/umeshika.png" alt="Student 4 Details" class="img" onmouseover="stu4()" onmouseout="ostu4()">
+                        </div>
+                    
+                        <div id="main" style="width: 1110px;">
+                            <div id="stu1" class="details">
+                                <h3 class="name">Gihan Tharaka</h3>
+                                <h3 class="role">Student 1</h3>
+                            </div>
+                    
+                            <div id="stu2" class="details">
+                                    <h3 class="name">Ruvindra Senevirathne</h3>
+                                    <h3 class="role">Student 2 </h3>
+                            </div>
+                    
+                            <div id="stu3" class="details">
+                                    <h3 class="name">Gayashan Tharaka</h3>
+                                    <h3 class="role">Student 3</h3>
+                            </div>
+                    
+                            <div id="stu4" class="details">
+                                    <h3 class="name">Umeshika Mahaliyadda</h3>
+                                    <h3 class="role">Student 4</h3>
+                            </div>
+                        </div>
+                </div>
+
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <a href="sitemap.html">Site Map</a>
+                        </br>
+                        <a href="#">Blog</a>
+                        </br>
+                        <a href="#">Newsletter</a>
+                        </br>
+                        <a href="about.html">About</a>
+                        </br>
+                        <a href="#">Faq</a>
+                        </br>
+                        <a href="#">Contact Us</a>
+                    </p>
+    
+                    <p class="footer-company-name"> &copy; InfoSchol Web Designing & Development Team. All rights reserved. &copy; 2019</p>
+                </div>
+    
+                <div class="footer-center">
+    
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>Company</span> Informatics Institute of Technology (IIT),</br>57 Ramakrishna Rd,</br> Colombo 00600 </p>
+                         
+                    </div>
+                    </br>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>+1 555 123456</p>
+                    </div>
+                    </br>
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="#">support@adcell.com</a></p>
+                    </div>
+                    </br>
+                </div>
+    
+                <div class="footer-right">
+    
+                    <p class="footer-company-about">
+                        <span>About the company</span>
+                        ADCELL offers readers a concise, current and comprehensive overview of the latest scientific research in all fields and applications of science and technology.
+                    </p>
+    
+                    <div class="footer-icons">
+    
+                        <a href="#"><i class="fa-icon"><img src="../Icons/facebook.png"></i></a>
+                        <a href="#"><i class="fa-icon"><img src="../Icons/twitter.png"></i></a>
+                        <a href="#"><i class="fa-icon"><img src="../Icons/linkedin.png"></i></a>
+                        <a href="#"><i class="fa-icon"><img src="../Icons/whatsapp.png"></i></a>
+                        <a href="#"><i class="fa-icon"><img src="../Icons/instagram.png"></i></a>
+    
+                    </div>
+    
+                </div>
+    
+            </footer>
+        
+    </section>
+
+    <a class="gotoupbtn" href="#"> <i class="fas fa-arrow-up" ></i> </a>
+    
+    <script>
+
+        function clickNews1(){
+            document.getElementById("image").src = "../Images/earth-moon-crater.jpg";
+            var article = document.getElementById("article");
+            article.innerHTML = "<h1 id='mainheading'>The moon’s craters suggest Earth hasn’t erased lots of past impacts</h1>"+
+            "<p>A new look at the moon’s craters suggests the Earth and moon both suffered a sharp increase in impacts around 290 million years ago, and Earth has kept its biggest scars.</p>"+
+            "<p>Geologists long assumed that erosion and tectonic activity had erased Earth’s craters so thoroughly that “you couldn’t say anything about the craters on Earth at all,” says planetary scientist Rebecca Ghent (SN: 12/22/18, p. 40). So to figure out how much Earth was pummeled in the past, Ghent and her colleagues turned to the moon.</p>"+
+            "<p>“We can use our closest neighbor to learn a lot more about the Earth’s history,” says planetary scientist Sara Mazrouei, who worked on the study as a graduate student under Ghent at the University of Toronto.  </p>"+
+            "<p>With no atmosphere and no plate tectonics, the moon’s surface preserves a record of nearly all of its 4.5 billion years of craters. If the moon sat through a hailstorm of impacts, Earth should have experienced the same storm, and therefore the same rate of cratering, the researchers argue in the Jan. 18 Science. But without knowing how old most lunar craters are, it’s unclear if the Earth and the moon suffered impacts constantly or in short bursts.</p>"+
+            "<p>Ghent realized in 2014 that the youngest craters on the moon were surrounded by large rocks, debris excavated by the impact that formed the crater (SN: 4/14/18, p. 32). Those large rocks absorb heat from the sun during the lunar day and radiate it back out at night in wavelengths of light visible to NASA’s Lunar Reconnaissance Orbiter.</p>"+
+            "<p>“Right away you could see the young craters popping out,” Ghent says. Older craters, by contrast, were surrounded by rocks that had been beaten down to dust over time, so they didn’t glow as brightly at night.</p>"+
+
+            "<iframe width='40%' height='315' src='https://www.youtube.com/embed/ANYxkwvb8pc' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"+
+
+            "<p>Ghent used nine craters whose ages were already known to figure out a mathematical relationship between a crater’s nighttime glow and its age. Then Mazrouei, working by hand, mapped all 111 lunar craters less than a billion years old and wider than 10 kilometers in diameter, and used that map to figure out the cratering rate.</p>"+
+            "<p>Most lunar scientists assumed that, after an early turbulent period of extreme bombardment more than 3 billion years ago, the moon’s impact rate has been mostly constant. “But we saw an increase,” Mazrouei says — specifically, a jump in impacts by a factor of 2.6 around 290 million years ago.</p>"+
+            "<p>The team then compared the lunar craters’ sizes and ages with 38 of the largest and most stable craters on the Earth. They lined up almost exactly in their timing and sizes.</p>"+
+            "<p>To double check that such large craters on Earth weren’t often erased by erosion, the researchers looked at volcanic features called kimberlite pipes near the craters. These carrot-shaped lava tubes change starkly in appearance when eroded. The kimberlite pipes that appeared on the same terrain as the large craters confirmed that very little of either feature had been lost to erosion, Ghent says.</p>"+
+            "<p>The jump in the impact rate could have been caused by a smash-up in the asteroid belt sending debris toward the inner solar system, says coauthor William Bottke, a planetary scientist at the Southwest Research Institute in Boulder, Colo. In 2007, Bottke linked one such asteroid break-up to the impact that killed the dinosaurs (SN: 9/8/07, p. 148).</p>"+
+            "<p>Ghent cautions against drawing conclusions about an exact date for that spike in impacts, noting it could have happened tens of millions of years earlier or later than estimated, or in multiple spurts. “I don’t want people to say, ‘Hey, the Permian-Triassic extinction happened during that time. This might have caused it.’ We don’t know that,” she says.</p>"+
+            "<p>The new finding offers an explanation for a gap in Earth’s craters between 300 million and 650 million years old, Bottke says. “We don’t see fewer craters because of erosion,” he says. “We see fewer craters because the impact flux was lower.”</p>"+
+            "<p>But the craters’ longevity raised another question. While the moon’s craters date back billions of years, Earth has almost no preserved craters older than about 650 million years. That makes sense if craters are lost constantly to erosion. But if not, where did the older craters go?</p>"+
+            "<p>Older craters could have been scraped away during a global glacial period called Snowball Earth, Bottke says. Other lines of geological evidence suggest Earth went through deep freezes, the last of which occurred about 650 million years ago.</p>"
+            "<p>Other planetary scientists not involved in the study expressed mixed reactions about its methodology and findings.</p>"+
+            "<p>“That is a major step forward in our understanding of the impact flux in the inner solar system,” says planetary scientist Christian Koeberl of the University of Vienna. “Their method is interesting and new.”</p>"+
+            "<p>Geologists Thomas Kenkmann and Stefan Hergarten of the University of Freiburg in Germany are more skeptical. In 2015, the duo showed that many of Earth’s craters could still be undiscovered (SN: 7/25/15, p. 5). They’re not convinced that the new study captured all craters, or that Earth’s crater count reflects an increase in impact rate 290 million years ago. It could just be that “younger craters are more likely to have survived,” Hergarten says. “The dataset is really small, so I would not trust in it too much.”</p>"+
+            "<p>Kenkmann agrees. “Considering the low number of craters for the lunar calculation, and the vague interpretation of the terrestrial record, it appears that a house of cards is being built here.”</p>";
+
+        }
+        function clickNews2(){
+
+            document.getElementById("image").src = "../Images/trex.jpg";
+            var article = document.getElementById("article");
+            article.innerHTML = "<h1>A new T. rex exhibit takes a deep dive into the iconic dinosaur</h1>"+
+            "<p>Ultrafierce Tyrannosaurus rex is an icon. But the “tyrant lizard king,” which lived between 68 million and 66 million years ago, is just the youngest member of a family of dinosaurs that went back to about 167 million years ago. The earliest tyrannosaurs were quick and small. So how did T. rex become so big and bad?</p>"+
+            "<p>That’s one of the questions at the heart of “T. rex: The Ultimate Predator,” an exhibit now open at the American Museum of Natural History in New York City. The exhibit takes a deep, multisensory dive into what we know about this most famous of dinosaurs. It is a fitting centerpiece for the museum’s 150th anniversary: The very first T. rex specimen was unearthed in Montana in 1905 by Barnum Brown, a paleontologist at the museum.</p>"+
+            "<p>In 1908, Brown and his team dug up a second T. rex skeleton — this one nearly perfect. The new exhibit includes a reproduction of this skeleton but goes beyond that static representation, drawing on cutting-edge research over the last 10 years or so to illustrate how scientists now think the animals grew, moved, ate and perceived the world.  </p>"+
+            "<p>For instance, cranial analyses suggest that T. rex had excellent vision and a very good sense of smell. The dinosaur also had a bone-crushing bite force (SN: 11/10/18, p. 13). Perhaps reassuringly, the exhibit also notes that while a juvenile T. rex could run — defined as lifting one foot fully off the ground followed by the other — adult T. rexes were too heavy for a running gait. Their skeletons would have buckled under such a weighty load.</p>"+
+            "<p>Life-size models of T. rex at various life stages help illustrate the animal’s astoundingly rapid rate of growth. Fluffy hatchlings were perhaps the size of chickens (and only about 40 percent of them survived their first year). By age 4, the animals were already 4 meters tall, and by age 20, they had reached their full height, about 13 meters. A T. rex that lived to age 28 was essentially a senior citizen; no known T. rex specimens are thought to be older than that.</p>"+
+            "<p>There’s a lot we still don’t know about T. rex: what it sounded like, how to tell apart males from females and how the species got to be so giant (SN: 3/16/19, p. 11). For clues to lingering puzzles, researchers have often turned to the other two dozen or so known members of the tyrannosaur family. As described in the exhibit, fossilized feathers found with several of T. rex’s close relatives are the reason scientists suspect the king had feathers too. And tyrannosaurs with sensitive facial skin could mean that T. rex was similarly sensitive to touch and temperature (SN: 4/29/17, p. 5).</p>"+
+            "<div class='gif' ><img src='../Images/trex.gif'  align='center' width='560px'></div>"+
+            "<p>Happily, the exhibit gives some of these other members of the tyrannosaur family tree a moment in the spotlight. These dinos include little-yet-fierce tyrannosaurs such as the wolf-sized Proceratosaurus bradleyi, which lived about 167 million years ago, and hollow-boned, long-armed and feathered Dilong paradoxus, which lived about 126 million years ago.</p>"+
+            "<p>Although there’s a lot of information to take in, the exhibit also aims to be highly interactive. There are touchable fossils and fossil casts, a “roar mixer” that allows people to imagine the voice of a T. rex by blending other animals’ sounds, and a virtual reality station where visitors can piece together a skeleton. The pièce de résistance comes at the end of the exhibit: A life-size animated T. rex projected onto a screen that tracks passersby; stand in front of it long enough and it might take a snap at you.</p>"+
+            "<div class='gif' ><img src='../Images/trex2.jpg'  align='center' width='560px'></div>";
+
+        }
+        
+        function clickNews3(){
+
+            document.getElementById("image").src = "../Images/robotgripper.jpg";
+            var article = document.getElementById("article");
+            article.innerHTML = "<h1>An origami design helps this robot lift delicate and heavy cargo</h1>"+
+            "<p>A new robotic gripper is a strong “hand” with a soft touch.</p>"+
+            "<p>The bell-shaped gripper has a silicone rubber skeleton with an intricate origami design, wrapped in an airtight, latex rubber skin. When a vacuum sucks air out of the gripper, the skin constricts, forcing the origami skeleton to collapse into a narrow funnel. The bunched-up gripper’s ridged interior and rough latex skin help it keep ahold of objects.</p>"+
+            "<p>Shuguang Li, a roboticist at Harvard University and MIT, and colleagues plan to present this device at the International Conference on Robotics and Automation in Montreal in May.</p>"+
+            "<p>In lab experiments, the soft gripper picked up household objects of various sizes and shapes, successfully glomming onto a smartphone and the handle of a mug, among other things. Whereas rigid robotic hands lack dexterity and might be liable to crush delicate objects, this rubber gripper gently handles fragile items such as soft fruits and wine glasses.</p>"+
+            "<p>And unlike other soft robotic hands, which struggle to lift heavy cargo, this device could lift up to about 12 kilograms — more than 120 times its own weight (SN: 9/16/17, p. 8). That ability allowed the gripper to hoist an electric drill and a full bottle of wine. Such a versatile gripping machine could one day work on a factory assembly line or lend a hand around the house.</p>"+
+            "<iframe width='40%' height='315' src='https://www.youtube.com/embed/W5sP2zlaK94' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"+
+            "<p></p>";
+
+        }
+
+        function clickNews4(){
+
+            document.getElementById("image").src = "../Images/geneediting.jpg";
+            var article = document.getElementById("article");
+            article.innerHTML = "<h1>Geneticists push for a 5-year global ban on gene-edited babies</h1>"+
+            "<p>Eighteen researchers, including two CRISPR pioneers, are calling for a temporary ban on creating gene-edited babies.</p>"+
+            "<p>“We call for a global moratorium on all clinical uses of human germline editing — that is, changing heritable DNA (in sperm, eggs or embryos) to make genetically modified children,” the statement’s cosigners, who come from seven countries, wrote in the March 14 Nature.</p>"+
+            "<p>Among the document’s signatories are CRISPR pioneers Feng Zhang of the Broad Institute of MIT and Harvard University and Emmanuelle Charpentier of the Max Planck Unit for the Science of Pathogens in Berlin.</p>"+
+            "<p>The proposed moratorium would last about five years to give time for public education and debate about experiments. The delay would buy time for scientists to further test and refine CRISPR/Cas9 and other gene-editing tools to make them safer. The moratorium would also be voluntary, with each country pledging individually not to allow clinical trials for creating gene-edited children. Countries would make independent decisions on how long such a ban should last.</p>"+
+            "<p>Gene editing of embryos, eggs and sperm would still be allowed for research purposes, but those then couldn’t be implanted in a woman’s uterus to establish pregnancy. Researchers could still use CRISPR/Cas9 and other gene editors to treat genetic diseases in adults and children, provided that any changes to those people’s DNA couldn’t be passed on to the next generation.</p>"+
+            "<p>If those provisions seem familiar, they are.</br>Some researchers and ethicists have previously called making gene-edited babies “irresponsible.” A 2017 report commissioned by the U.S. National Academies of Sciences and Medicine (SN: 3/18/17, p. 7), as well as two international conferences on human genome editing in 2015 and 2018 (SN: 12/26/15, p. 12; SN: 12/22/18, p. 20), concluded that heritable gene editing is not ready for clinical use and should wait until the technology matures and there is public consensus on allowing it.</p>"+
+            "<p>The big difference between those statements and the new call is the word “moratorium,” says bioethicist Alta Charo of the University of Wisconsin–Madison Law School. “In which case there is no real daylight, only a dictionary, between the authors of the Nature essay and the reports and summit statements made to date.”</p>"+
+            "<p>Still, those previous admonitions didn’t stop Chinese scientist Jiankui He from editing DNA in embryos that resulted in the birth of two baby girls last year (SN Online: 11/28/18). Another woman was reportedly pregnant with a gene-edited baby at the time of He’s announcement in November. Other researchers knew about He’s plans and didn’t stop him.</p>"+
+            "<p>“Given that both conferences declared as irresponsible this kind of experiment, but in fact, it went ahead, says that we needed a little bit more than just clucking at the end of things,” says molecular geneticist Paul Berg of Stanford University School of Medicine. “We needed to say a little bit more and actually call for a moratorium.”</p>"+
+            "<p>Berg, who helped author the proposal, admits the new call is mostly a matter of semantics, but argues that the word choice does matter. “If everyone is saying it would be irresponsible to do it, then why not be explicit and say it should not be done?” he says.</p>"+
+            "<p>Heads of the U.S. National Academies of Sciences and Medicine, in Washington, D.C., the U.S. National Institutes of Health, in Bethesda, Md., and the Royal Society of Science in London published letters in support of the idea in the same issue of Nature.</p>"+
+            "<p>Other scientists say they support the proposed moratorium, but aren’t sure it will stop rogue scientists from copying He’s actions. There’s no harm in using the word “moratorium,” says Stephan Guttinger, a philosopher of biology at the London School of Economics and Political Science. But “I don’t think someone will say, ‘oh, someone said moratorium, I really can’t do that now.’”</p>"+
+            "<p>Russ Altman, a bioengineer and geneticist at Stanford University, says it may be easier now to get a moratorium to stick after He’s breach. “It will be harder to find a harbor of safety” for researchers who violate the ban, Altman says. “Now a ban will have a bigger weight of scientific credibility, and would be more likely to be obeyed.”</p>"+
+            "<p>A moratorium, if countries agree to it, would have “the force of moral authority,” even if it doesn’t have legal weight, Altman says.</P>";
+
+        }
+
+        function clickNews5(){
+            document.getElementById("image").src = "../Images/yellowstone.jpg";
+            var article = document.getElementById("article");
+            article.innerHTML = "<h1>‘Epic Yellowstone’ captures the thriving ecosystem of the world-famous park</h1>"+
+                "<p>“What you’re about to experience is Yellowstone as it’s rarely seen,” actor and Montana resident Bill Pullman says in the opening narration of a new documentary. Smithsonian Channel’s Epic Yellowstone, a four-part series that airs this month and will be available via several streaming services, puts Yellowstone National Park’s recovering ecosystem into the limelight. The park went nearly half a century with few top predators, and efforts to restore the resulting imbalance are just now taking hold. Following the lives of Yellowstone’s birds, mammals and even insects as they strive to survive, each episode follows a common ecological theme: the intricate web of cause and effect that exists among predators, prey and the environment.</p>"+
+                "<p>That theme is especially apparent in the series’ second episode, “Return of the Predators,” which debuts March 17. It focuses on the return of the park’s top predators: gray wolves and grizzly bears. Gray wolves were reintroduced to Yellowstone in 1995, roughly 50 years after being eliminated from the area. And to turn around the loss of grizzly bears, which dropped to fewer than 150 individuals in the continuous United States, the bears gained protected status in 1975 by the Endangered Species Act. As of 2017, an estimated 700 grizzly bears and more than 100 gray wolves lived in Yellowstone.</p>"+
+                "<p>The episode avoids the controversies, such as how the protection of wolves and grizzlies threatens ranchers. Instead, the show keeps the lens on the broader benefits of having these predators back in the Yellowstone ecosystem. Their return is now keeping in check elk and bison, whose populations boomed during the predators’ absence, resulting in overgrazed grasslands. And with wolves back in the picture, coyotes are dropping to more sustainable levels. Coyote numbers had ballooned without the wolves around, leading to a dramatic decline in numbers of Yellowstone’s pronghorn (the only animal with branching horns that sheds them annually).</p>"+
+                "<p>To tell this story, the episode follows a year in the lives of a lone adolescent male wolf named Blacktail and a female grizzly bear named Quad-Mom. The bear earned her name after she successfully raised four cubs, a rare feat. The viewer is transported into dramatic scenes of wolves chasing down bison, and a mother bear with her two cubs working with a coyote to flush out young elk hidden among sage brush.</p>"+
+                "<div class='gif' ><img src='../Images/swallow.jpg'  align='center' width='560px'></div>"+
+                "<p>The series’ other episodes also follow individual animal characters to illustrate the ecological theme of interdependence. For instance, the third episode, “Life on the Wing,” which premieres March 24, follows the park’s many aerial residents, such as osprey and sandhill crane parents trying to keep their lone chicks alive. The episode also features stunning slow-motion video of dragonflies using their adept flying skills to catch smaller bugs on the wing, and nest-building cliff swallows collecting mud formed by bison at a stream’s edge. In the fourth episode, “Down the River Wild,” airing March 31, the focus is on the Yellowstone River and the many animals, including people, who depend on it.</p>"+
+                "<p>Emotional music, breathtaking panoramas, intimate close-ups and stunning time-lapse shots create a gorgeous and engaging display of Yellowstone. But overwrought dialog (such as bestowing on a pack of wolves taking down a bison the “mythological status” of “true bison hunters”), the occasional incomplete story arc and sometimes flat, monotone narration distract from the dazzling cinematography.</p>"+
+                "<p>These shortcomings, however, are minor. Epic Yellowstone overall superbly combines charismatic characters, dramatic video and detailed history to capture Yellowstone’s wild heart and illustrate fundamental concepts of ecology.</p>"
+        }
+
+        function clickNews6(){
+            document.getElementById("image").src = "../Images/shrimp.jpg";
+            var article = document.getElementById("article");
+            article.innerHTML = "<h1>Some shrimp make plasma with their claws. Now a 3-D printed claw can too</h1>"+
+                "<p>Some shrimp have a secret superpower: Snapping their claws unleashes bubbles that produce plasma and shock waves to stun prey. Now a 3-D printed replica claw has reproduced the phenomenon in the lab, scientists report March 15 in Science Advances.</p>"+
+                "<p>When a snapping shrimp (Alpheus formosus and related species) slams its powerful claw shut, it spews a jet of water. That fast-moving stream creates a bubble, which then collapses on itself. The collapse produces extreme pressures and temperatures that reach thousands of degrees Celsius, generating a plasma, a state of matter in which electrons are freed from their atoms (SN: 10/6/01, p. 213).</p>"+
+                "<p>Using scans of a snapping shrimp’s claw as a blueprint, scientists 3-D printed a version five times the size of the original, making it snap shut at about the same speed as the real thing. The team used high-speed imaging to observe the bubbles that the fake claw produced as well as another camera that picked up dim flashes of light associated with the plasma. The researchers are investigating whether similar techniques might be useful for disinfecting water with plasma, which can kill pathogens (SN: 3/4/17, p. 15).</p>"+
+                "<p>But for the shrimp, the plasma production is an afterthought: “We don’t think the shrimp are intentionally trying to make a plasma,” says mechanical engineer David Staack of Texas A&M University in College Station, a coauthor of the study. Instead, the shrimp aim to produce a shock wave that immobilizes their prey. That shock wave occurs under conditions that also produce a plasma, Staack says. “It does go claw in hand.”</p>"+
+                "<iframe width='560' height='315' src='https://www.youtube.com/embed/bCvGKW8H7HE' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>"
+        }
+   
+        
+        // script for group members images on footer
+        function stu1(){
+            document.getElementById("stu1").style.display = "block";
+        }
+
+        function stu2(){
+            document.getElementById("stu2").style.display = "block";
+        }
+
+        function stu3(){
+            document.getElementById("stu3").style.display = "block";
+        }
+
+        function stu4(){
+            document.getElementById("stu4").style.display = "block";
+        }
+
+        function ostu1(){
+            document.getElementById("stu1").style.display = "none";
+        }
+
+        function ostu2(){
+            document.getElementById("stu2").style.display = "none";
+        }
+
+        function ostu3(){
+            document.getElementById("stu3").style.display = "none";
+        }
+
+        function ostu4(){
+            document.getElementById("stu4").style.display = "none";
+        }
+
+        
+    </script>
+    
+</body>
+</html>

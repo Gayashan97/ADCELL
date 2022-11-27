@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ADCELL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/external.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="../JS/timer.js"></script>
+
+    <style>
+
+        .rightbar{
+            height: 100%;
+        }
+        .grid {
+            width: 100%;
+            background-color: #fff;
+            padding: 10px 50px 50px 50px;
+        }
+
+        .grid h1 {
+            font-family: "Segoe UI";
+            font-size: 60px;
+            text-align: center;
+            color: #95b932;
+            padding: 2px 0px;
+        }
+
+        #mydiv2{
+            margin-top: 0;
+            padding-top: 0;
+            height: 100%;
+        }
+
+        #score,#ans,{
+            color: black;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .grid #question {
+            font-family: "Segoe UI";
+            font-size: 20px;
+            color: #5A6772;
+        }
+
+        #question {
+            margin: 1px;
+        }
+
+        .buttons {
+            margin-top: 1%;
+            margin-left: 5%;
+            width: 62%;
+            height: auto;
+        }
+
+        #btn0, #btn1, #btn2, #btn3 {
+            background-color: #ffffff;
+            width: 300px;
+            font-size: 20px;
+            color: #000000;
+            border: none;
+            border-radius: 10px;
+            margin: 0px 80px 10px 0px;
+            padding: 10px;
+            box-shadow: 0px 5px 20px #9f9f9f;
+            border: #9f9f9f 1px solid;
+        }
+
+        #btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover {
+            cursor: pointer;
+            background-color: #37A8FF;
+        }
+
+        #btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus {
+            outline: 0;
+        }
+
+        #progress {
+            color: rgb(97, 144, 142);
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #heading {
+            font-family: "Segoe UI";
+            font-weight: 700;
+            font-size: 38px;
+            margin-top: 2%;
+            margin-left: 3%;
+            margin-bottom: 0%;
+        }
+
+        #counter{
+            color: #fff;
+        }
+
+        #result{
+            width: 50%;
+            border: black 5px solid;
+            margin-top: 50px;
+            margin-left: 6%;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        #counter{
+            text-align: center;
+            color: #ffffff;
+            font-family: "Segoe UI";
+            font-weight: 700;
+        }
+
+        #tracker{
+            text-align: center;
+            color: #ffffff;
+            font-family: "Segoe UI";
+            font-weight: 700;
+        }
+
+        .qlinks{
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+            align-items: center;
+        }
+
+        .qlinks label{
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        #imgSource{
+            width: 23%;
+            height: auto;
+            margin-left: 20%;
+            margin-top: 0.5%;
+        }
+
+        #time{
+            font: black;
+        }
+
+        #retry{
+            margin-left: 350px;
+            background-color: maroon;
+            color: white;
+            border-radius: 10px;
+            width: 150px;
+            height: 40px;
+            font-size: 15px; 
+        }
+
+    </style>
+</head>
+
+<body background="../Images/background.jpg" onload="countdown(5)">
+
+    
+    <div class="header_logo-box">
+        <a href="home.html"><img src="../Images/Logo.png" alt="Logo" class="header_logo"></a>
+    </div>
+
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+
+    <section class="content" id="myDiv">
+        <header>
+            <nav class="navigation" >
+                <div class="leftnav" id="nav">
+                    <a href="home.html" class="active" onclick="toggleClass(this)">Home</a>
+                    <a href="store.html" class="active" onclick="toggleClass(this)">Store</a>
+                    <a href="quiz.html" class="bak" onclick="toggleClass(this)">Quiz</a>
+                    <a href="images.html" class="active" onclick="toggleClass(this)">Images</a>
+                    <a href="feedback.html" class="active" onclick="toggleClass(this)">Feedback</a>
+                    <a href="about.html" class="active" onclick="toggleClass(this)">About</a>
+                </div>
+
+                <div class="rightnav">
+                    <button><img class="fonticon" id="fonticon1" src="../Icons/baseline_format_color_text_white_18dp.png"></button>
+                    <button><img class="fonticon" id="fonticon2" src="../Icons/baseline_format_color_text_white_18dp.png"></button>
+                </div>
+
+            </nav>
+            
+                
+        </header>
+
+
+        <div class="rightbar">
+                <h1 id="tracker" >Time Left :</h1>
+                <h1 id="counter" ></h1>
+                <div class="qlinks">
+                        <label>Question 01</label>
+                        <label>Question 02</label>
+                        <label>Question 03</label>
+                        <label>Question 04</label>
+                        <label>Question 05</label>
+                        <label>Question 06</label>
+                        <label>Question 07</label>
+                        <label>Question 08</label>
+                        <label>Question 09</label>
+                        <label>Question 10</label>
+                </div>                
+        </div>
+
+        <div id="myDiv2">
+        <article>
+            <h1 id="heading">Science Knowledge Quiz</h1>
+            <div class="grid" style="background-color: transparent;">
+                <div id="quiz">
+                        <hr style="margin-top: 20px" width="70%">
+                    
+                    <p id="question"></p>
+                    
+                    <img src="" alt="" id="imgSource" >
+
+                
+
+                    <div class="buttons">
+                        <button id="btn0"><span id="choice0"></span></button>
+                        <button id="btn1"><span id="choice1"></span></button>
+                        <button id="btn2"><span id="choice2"></span></button>
+                        <button id="btn3"><span id="choice3"></span></button>
+                    </div>
+                
+                    <hr style="margin-top: 20px" width="70%">
+                    <footer>
+                        <p id="progress">Question x of y</p>
+                    </footer>
+                </div>
+            </div>
+        
+        <script src="../JS/quiz.js"></script>
+        <script src="../JS/question.js"></script>
+        <script src="../JS/app.js"></script>
+            
+        </article>
+    </div>
+
+    <footer class="footer-distributed">
+
+            <div class="footer-left">
+                <p class="footer-links">
+                    <a href="sitemap.html">Site Map</a>
+                    </br>
+                    <a href="#">Blog</a>
+                    </br>
+                    <a href="#">Newsletter</a>
+                    </br>
+                    <a href="about.html">About</a>
+                    </br>
+                    <a href="#">Faq</a>
+                    </br>
+                    <a href="#">Contact Us</a>
+                </p>
+
+                <p class="footer-company-name"> &copy; InfoSchol Web Designing & Development Team. All rights reserved. &copy; 2019</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Company</span> Informatics Institute of Technology (IIT),</br>57 Ramakrishna Rd,</br> Colombo 00600 </p>
+                        
+                </div>
+                </br>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+1 555 123456</p>
+                </div>
+                </br>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="#">support@adcell.com</a></p>
+                </div>
+                </br>
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>About the company</span>
+                    ADCELL offers readers a concise, current and comprehensive overview of the latest scientific research in all fields and applications of science and technology.
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa-icon"><img src="../Icons/facebook.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/twitter.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/linkedin.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/whatsapp.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/instagram.png"></i></a>
+
+                </div>
+
+            </div>
+
+        </footer>
+    </section>
+
+    <a class="gotoupbtn" href="#"> <i class="fas fa-arrow-up" ></i> </a>
+  
+</body>
+</html>

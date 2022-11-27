@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ADCELL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/external.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <style>
+
+        .rightbar{
+            height: 100%;
+        }
+
+        .instructions{
+            width: 90%;
+            margin: 3%;
+            overflow: hidden;
+            font-family: "Segoe UI Semibold";
+            font-size: 20px;
+        }
+
+        #container{
+            margin-left: 100px;
+            width: 800px;
+        }
+
+        #startbtn{
+            margin-left: 250px;
+        }
+
+        #green{
+            color: green;
+        }
+
+        #red{
+            color: red;
+        }
+
+        #blue{
+            color: #4e4ebb;
+        }
+
+        button{
+            cursor: pointer;
+        }
+
+        .heading {
+            font-family: "Segoe UI";
+            font-weight: 700;
+            font-size: 38px;
+            margin-top: 2%;
+            margin-left: 3%;
+            margin-bottom: 0%;
+        }
+
+        #counter{
+            text-align: center;
+            color: #ffffff;
+            font-family: "Segoe UI";
+            font-weight: 700;
+        }
+
+        #time{
+            text-align: center;
+            font-family: "Segoe UI";
+            font-weight: 700;
+            color: white;
+        }
+
+        .qlinks{
+            display: flex;
+            flex-direction: column;
+            color: #ffffff;
+            align-items: center;
+        }
+
+        .qlinks label{
+            padding: 5px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body background="../Images/background.jpg">
+
+    
+    <div class="header_logo-box">
+        <a href="home.html"><img src="../Images/Logo.png" alt="Logo" class="header_logo"></a>
+    </div>
+
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+
+    <section class="content">
+        <header>
+            <nav class="navigation" >
+                <div class="leftnav">
+                    <a href="home.html" class="active" >Home</a>
+                    <a href="store.html" class="active" >Store</a>
+                    <a href="quiz.html" class="bak" >Quiz</a>
+                    <a href="images.html" class="active" >Images</a>
+                    <a href="feedback.html" class="active" >Feedback</a>
+                    <a href="about.html" class="active" >About</a>
+                </div>
+
+                <div class="rightnav">
+                    <button><img class="fonticon" id="fonticon1" src="../Icons/baseline_format_color_text_white_18dp.png"></button>
+                    <button><img class="fonticon" id="fonticon2" src="../Icons/baseline_format_color_text_white_18dp.png"></button>
+                </div>
+
+            </nav>
+            
+                
+        </header>
+
+
+        <div class="rightbar">
+            <h1 id="time" >Time Left :</h1>
+            <h1 id="counter" >5:00</h1>
+
+            <div class="qlinks">
+                    <label>Question 01</label>
+                    <label>Question 02</label>
+                    <label>Question 03</label>
+                    <label>Question 04</label>
+                    <label>Question 05</label>
+                    <label>Question 06</label>
+                    <label>Question 07</label>
+                    <label>Question 08</label>
+                    <label>Question 09</label>
+                    <label>Question 10</label>
+            </div>
+        </div>
+
+        <article>
+        <h1 class="heading">Science Knowledge Quiz</h1>
+                <div id="container">
+                    <h1 id="topic" style="font-size: 30px; text-decoration: underline;">How much do you know about Science?</h1>
+                    <div class="instructions">
+                    <p>Test your knowledge of scientific facts and applications of scientific principles by taking our short 10-question quiz.</p>
+                    <p>You will be awarded marks out of 20 after finishing.</p>
+                        <p>
+                            <span id="blue">You have 5 minutes to complete the quiz.</span> <br/>
+                            <span id="green">2 marks will be given for each correct answer.</span> <br/>
+                            <span id="red">1 mark will be deducted for each wrong answer.</span> 
+                        </p>
+                    </div>
+                    <form action="quizestart.html">
+                        <button id="startbtn" class="btn">START</button>
+                    </form>
+                </div> 
+        </article>
+
+        <div>
+            <a href="../CVs/student3_cv.html"><span class="creator">Creator: Student 3</span></a>
+        </div>
+
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+                <p class="footer-links">
+                    <a href="sitemap.html">Site Map</a>
+                    </br>
+                    <a href="#">Blog</a>
+                    </br>
+                    <a href="#">Newsletter</a>
+                    </br>
+                    <a href="about.html">About</a>
+                    </br>
+                    <a href="#">Faq</a>
+                    </br>
+                    <a href="#">Contact Us</a>
+                </p>
+
+                <p class="footer-company-name"> &copy; InfoSchol Web Designing & Development Team. All rights reserved. &copy; 2019</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Company</span> Informatics Institute of Technology (IIT),</br>57 Ramakrishna Rd,</br> Colombo 00600 </p>
+                        
+                </div>
+                </br>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+1 555 123456</p>
+                </div>
+                </br>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="#">support@adcell.com</a></p>
+                </div>
+                </br>
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>About the company</span>
+                    ADCELL offers readers a concise, current and comprehensive overview of the latest scientific research in all fields and applications of science and technology.
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa-icon"><img src="../Icons/facebook.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/twitter.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/linkedin.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/whatsapp.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/instagram.png"></i></a>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </section>
+    
+    <a class="gotoupbtn" href="#"> <i class="fas fa-arrow-up" ></i> </a>
+    
+</body>
+</html>

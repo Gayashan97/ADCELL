@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ADCELL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/external.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <style>
+
+        .store{
+            float: left;
+            width: 75%;
+        }
+
+        .store > .store-content{
+            padding: 4%;
+            float: left;
+            width: 97%;
+        }
+
+        .store > .store-content > .cover{
+            background-image: url('../images/store_cover.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            max-width: 900px;
+            float: left;
+        }
+
+        .store > .store-content > .store-items > .store-item{
+            width: 18%;
+            float: left;
+            margin: 1% 3.5% 2% 3.5%;
+        }
+
+        .store > .store-content > .store-items > .store-item > .image{
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            height: 180px;
+            box-shadow: 1px 1px 10px grey;
+        }
+
+        .store > .store-content > .store-items > .store-item > .details{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;  
+        }
+
+        .store > .store-content > .store-items > .store-item > .details > .description{
+            text-align: center;
+            min-height: 50px;
+        }
+
+        .store > .store-content > .store-items > .store-item > .details > .price{
+            color: #00CB35;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .store > .store-content > .store-items > .store-item > .details > .add-to-cart{
+            background-color: #0073CB;
+            width: 100%;
+            border-radius: 5px;
+            padding: 4px;
+            color: white;
+            border: 1px solid #37A8FF;
+        }
+
+        .store > .store-content > .store-items > .store-item > .details > .inactive{
+            background-color: #37A8FF;
+        }
+
+        .rightbar{
+            float: right;
+            height: 100%;
+        }
+
+        .rightbar > .header{
+            margin: 0 2.5% 0 2.5%;
+            color: white;
+            font-size: 30px;
+        }
+
+        .rightbar > .cart-items > .store-item{
+            float: left;
+            width: 100%;
+            margin: 5% 0 5% 0;
+        }
+
+        .rightbar > .cart-items > .store-item > .row{
+            margin: 2.5% 2.5% 5% 2.5%;
+            display: flex;
+            width: 100%;
+        }
+
+        .rightbar > .cart-items > .store-item > .row > img.image{
+            flex: 1;
+            background-size: contain;
+            height: 100px;
+        }
+
+        .rightbar > .cart-items > .store-item > .row > .description{
+            color: white;
+            padding: 5px;
+            flex: 2;
+            overflow: hidden;
+        }
+
+        .rightbar > .cart-items > .store-item > .row > .close-button{
+            color: white;
+        }
+
+        .rightbar > .cart-items > .store-item > .row > div.quantity{
+            flex: 1;
+            display: flex;
+        }
+
+        .rightbar > .cart-items > .store-item > .row > div.quantity > .label{
+            flex: 1;
+            color: white;
+        }
+
+        .rightbar > .cart-items > .store-item > .row > div.quantity > input.quantity{
+            flex: 1;
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            color: white;
+        }
+
+        .rightbar > .cart-items > .store-item > .row > div.quantity > input.quantity:focus{
+            outline: none;
+        }
+
+        .rightbar > .cart-items > .store-item > .row > .price{
+            flex: 1;
+            color: white;
+            text-align: right;
+            margin-right: 3%;
+        }
+
+        .rightbar > .divider{
+            float: left;
+            width: 100%;
+            height: 2px;
+            background-color: white;
+            margin: 15% 0 15% 0;
+        }
+
+        .rightbar > .total{
+            width: 100%;
+            float: left;
+            display: flex;
+        }
+
+        .rightbar > .total > .label{
+            color: white;
+            flex: 1;
+        }
+
+        .rightbar > .total > .cost{
+            color: white;
+        }
+
+        .rightbar > #place-order{
+            width: 100%;
+            padding: 5px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+
+        .personal-details{
+            float: left;
+            padding: 1% 4% 4% 4%;
+            width: 92%;
+        }
+
+        .personal-details > .header{
+            font-size: 30px;
+            margin: 10px;
+        }
+
+        .personal-details > .row{
+            display: flex;
+            margin-bottom: 0.5%;
+        }
+
+        .personal-details > .row > input{
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid grey;
+            margin: 15px 10px;
+            flex: 1;
+        }
+
+        .personal-details > .row > input:focus{
+            outline: none
+        }
+
+        .personal-details > .row > select{
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid grey;
+            margin: 15px 10px;
+            flex: 1;
+        }
+
+        .personal-details > .row > select:focus{
+            outline: none;
+        }
+
+        .personal-details > .row > input[type=submit]{
+            background-color: #00CB35;
+            border: 1px solid #37FF90;
+        }
+
+        .btn{
+            margin-left: 1%;
+        }
+
+    </style>
+</head>
+
+<body background="../Images/background.jpg">
+
+    
+    <div class="header_logo-box">
+        <a href="home.html"><img src="../Images/Logo.png" alt="Logo" class="header_logo"></a>
+    </div>
+
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+
+    <section class="content">
+        <header>
+            <nav class="navigation" >
+                <div class="leftnav">
+                    <a href="home.html" class="active" >Home</a>
+                    <a href="store.html" class="bak" >Store</a>
+                    <a href="quiz.html" class="active" >Quiz</a>
+                    <a href="images.html" class="active" >Images</a>
+                    <a href="feedback.html" class="active" >Feedback</a>
+                    <a href="about.html" class="active" >About</a>
+                </div>
+
+                <div class="rightnav">
+                    <button><img class="fonticon" id="fonticon1" src="../Icons/baseline_format_color_text_white_18dp.png" onclick="decreaseFontSize()"></button>
+                    <button><img class="fonticon" id="fonticon2" src="../Icons/baseline_format_color_text_white_18dp.png" onclick="increaseFontSize()"></button>
+                </div>
+
+            </nav>
+            
+                
+        </header>
+
+
+        <div class="rightbar">
+            <div class="header">
+                CART
+            </div>
+            <div class="cart-items">
+                
+            </div>
+            <div class="divider"></div>
+            <div class="total">
+                <div class="label">Total</div>
+                <div class="cost">0 LKR</div>
+            </div>
+            <button id="place-order" class="btn" onclick="placeOrder()">
+                Place Order
+            </button>
+        </div>
+
+        <div class="store">
+            <div class="store-content">
+                <img src="../images/store_cover.jpg" alt="" class="cover">
+                <div class="store-items">
+                    
+                </div>
+            </div>
+        </div>   
+
+        <div class="personal-details">
+            <div class="header">
+                Personal Details
+            </div>
+            <div class="row">
+                <input id="firstName" placeholder="First Name" type="text">
+                <input id="lastName" placeholder="Last Name" type="text">                
+            </div>
+            <div class="row">
+                <input id="companyName" type="text" placeholder="Company / Organization Name">
+            </div>
+            <div class="row">
+                <select id="country" name="country" id="country">
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="United States">United States</option>
+                </select>
+            </div>
+            <div class="row">
+                <input id="address1" type="text" placeholder="Address Line 1">
+            </div>
+            <div class="row">
+                <input id="address2" type="text" placeholder="Address Line 2">
+            </div>
+            <div class="row">
+                <input id="city" type="text" placeholder="City">
+                <input id="state" type="text" placeholder="State / Province / Region"/>
+                <input id="zip" type="text" placeholder="ZIP / Postal Code">
+            </div>
+            <input id="submitForm" type="submit" value="SUBMIT" class="btn" onclick="validateForm()">
+        </div>
+         
+        <div>
+            <a href="../CVs/student1_cv.html"><span class="creator">Creator: Student 1</span></a>
+        </div>
+
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+                <p class="footer-links">
+                    <a href="sitemap.html">Site Map</a>
+                    </br>
+                    <a href="#">Blog</a>
+                    </br>
+                    <a href="#">Newsletter</a>
+                    </br>
+                    <a href="about.html">About</a>
+                    </br>
+                    <a href="#">Faq</a>
+                    </br>
+                    <a href="#">Contact Us</a>
+                </p>
+
+                <p class="footer-company-name"> &copy; InfoSchol Web Designing & Development Team. All rights reserved. &copy; 2019</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="fa fa-map-marker"></i>
+                    <p><span>Company</span> Informatics Institute of Technology (IIT),</br>57 Ramakrishna Rd,</br> Colombo 00600 </p>
+                        
+                </div>
+                </br>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <p>+1 555 123456</p>
+                </div>
+                </br>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <p><a href="#">support@adcell.com</a></p>
+                </div>
+                </br>
+            </div>
+
+            <div class="footer-right">
+
+                <p class="footer-company-about">
+                    <span>About the company</span>
+                    ADCELL offers readers a concise, current and comprehensive overview of the latest scientific research in all fields and applications of science and technology.
+                </p>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="fa-icon"><img src="../Icons/facebook.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/twitter.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/linkedin.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/whatsapp.png"></i></a>
+                    <a href="#"><i class="fa-icon"><img src="../Icons/instagram.png"></i></a>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+    </section>
+    
+    <a class="gotoupbtn" href="#"> <i class="fas fa-arrow-up" ></i> </a>
+
+    <script src="../JS/font-operator.js"></script>
+    <script src="../JS/products.js"></script>
+    <script src="../JS/store.js"></script>
+</body>
+</html>

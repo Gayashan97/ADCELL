@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ADCELL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../CSS/external.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <style>
+        .thumbnail{
+            display: inline-block;
+            width: 134px;
+            height: 172px;
+            margin: 10px;
+            border: 1px solid white;
+            padding: 10px;
+            box-shadow: 0px 1px 10px black;
+            align-self: center;
+            background-color: white;
+        }
+        .thumbnail img:hover{
+            width: 132px;
+            height: 170px;
+        }
+        
+        #collection{
+            padding: 3%;
+            display: inline;
+        }
+        
+        #description{
+            margin-left: 3%;
+            height: 150px;  
+            font-family: "Segoe UI Semibold"
+        }
+        #dd1{
+            padding-left: 15%;
+            display: inline-block;
+            height: 250px;
+        }
+
+        #dd1 span{
+            font-family: "Segoe UI";
+            font-weight: 700;
+        }
+
+        #dropdown{
+            display: inline;
+        }
+        select{
+            width: 200px;
+            height: 30px;
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .rightbar{
+            height: 1000px;
+        }
+
+    </style>
+</head>
+
+<body background="../Images/background.jpg">
+
+    
+    <div class="header_logo-box">
+        <a href="home.html"><img src="../Images/Logo.png" alt="Logo" class="header_logo"></a>
+    </div>
+
+    <div class="search-box">
+        <input class="search-txt" type="text" name="" placeholder="Type to search">
+        <a class="search-btn" href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+
+    <section class="content">
+        <header>
+            <nav class="navigation" >
+                <div class="leftnav" id="nav">
+                    <a href="home.html" class="active">Home</a>
+                    <a href="store.html" class="active">Store</a>
+                    <a href="quiz.html" class="active">Quiz</a>
+                    <a href="images.html" class="bak">Images</a>
+                    <a href="feedback.html" class="active">Feedback</a>
+                    <a href="about.html" class="active">About</a>
+                </div>
+
+                <div class="rightnav">
+                    <button><img class="fonticon" id="fonticon1" src="../Icons/baseline_format_color_text_white_18dp.png"></button>
+                    <button><img class="fonticon" id="fonticon2" src="../Icons/baseline_format_color_text_white_18dp.png"></button>
+                </div>
+
+            </nav>
+            
+                
+        </header>
+    
+    <section class="content" id="container1">
+            <section class="main_img">
+                <div id="container2" class="img">
+                        <img id="image" src="../Images/waterbear.png"/>
+                </div>
+            </section>
+
+            <div class="rightbar">
+            
+            </div>
+        
+        
+            <div id="collection">
+                <div class="thumbnail">
+                    <img src="../Images/waterbear.png" alt="Waterbear" width="100%" height="100%" onmouseover="showDescription(this);" />
+                </div>
+                <div class="thumbnail">
+                    <img src="../Images/prism.jpg" alt="baobab" width="100%" height="100%" onmouseover="showDescription(this);"/>
+                </div> 
+                <div class="thumbnail">
+                    <img src="../Images/reaction.jpg" alt="rafflesia" width="100%" height="100%" onmouseover="showDescription(this);"/>
+                </div>
+                <div class="thumbnail">
+                    <img src="../Images/falcon_heavy.jpeg" alt="Hillier" width="100%" height="100%" onmouseover="showDescription(this);"/>
+                </div>
+                <div class="thumbnail">
+                    <img src="../Images/robot.jpg" alt="Tardigrades" width="100%" height="100%" onmouseover="showDescription(this);"/>
+                </div>
+            </div>
+
+            <div id="description"> 
+                    <p>Tardigrades are a phylum of water-dwelling, eight-legged, segmented micro-animals. They were first described by the German zoologist Johann August Ephraim Goeze in 1773, who gave them the name of 'little water bears'. The name Tardigrada was given in 1777 by the Italian biologist Lazzaro Spallanzani.</p>
+                
+            </div>
+
+            <div id="dropdown">
+                <div id="dd1">
+                    <span>Page Background Color</span><br/>
+                    <select id="bgcolors" onchange="changeColor();">
+                        <option value="white">White</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                        <option value="pink">Pink</option>
+                        <option value="blue">Blue</option>
+                        </option>
+                    </select>
+                </div>
+                <div id="dd1">
+                    <span>Page Font Color</span><br/>
+                    <select id="fontcolor" onchange="changeFont();">
+                        <option value="black">Black</option>
+                        <option value="gray">Gray</option>
+                        <option value="brown">Brown</option>
+                        <option value="purple">Purple</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <a href="../CVs/student4_cv.html"><span class="creator">Creator: Student 4</span></a>
+            </div>
+
+            <footer class="footer-distributed">
+
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <a href="sitemap.html">Site Map</a>
+                        </br>
+                        <a href="#">Blog</a>
+                        </br>
+                        <a href="#">Newsletter</a>
+                        </br>
+                        <a href="about.html">About</a>
+                        </br>
+                        <a href="#">Faq</a>
+                        </br>
+                        <a href="#">Contact Us</a>
+                    </p>
+    
+                    <p class="footer-company-name"> &copy; InfoSchol Web Designing & Development Team. All rights reserved. &copy; 2019</p>
+                </div>
+    
+                <div class="footer-center">
+    
+                    <div>
+                        <i class="fa fa-map-marker"></i>
+                        <p><span>Company</span> Informatics Institute of Technology (IIT),</br>57 Ramakrishna Rd,</br> Colombo 00600 </p>
+                         
+                    </div>
+                    </br>
+                    <div>
+                        <i class="fa fa-phone"></i>
+                        <p>+1 555 123456</p>
+                    </div>
+                    </br>
+                    <div>
+                        <i class="fa fa-envelope"></i>
+                        <p><a href="#">support@adcell.com</a></p>
+                    </div>
+                    </br>
+                </div>
+    
+                <div class="footer-right">
+    
+                    <p class="footer-company-about">
+                        <span>About the company</span>
+                        ADCELL offers readers a concise, current and comprehensive overview of the latest scientific research in all fields and applications of science and technology.
+                    </p>
+    
+                    <div class="footer-icons">
+    
+                        <a href="#"><i class="fa-icon"><img src="../Icons/facebook.png"></i></a>
+                        <a href="#"><i class="fa-icon"><img src="../Icons/twitter.png"></i></a>
+                        <a href="#"><i class="fa-icon"><img src="../Icons/linkedin.png"></i></a>
+                        <a href="#"><i class="fa-icon"><img src="../Icons/whatsapp.png"></i></a>
+                        <a href="#"><i class="fa-icon"><img src="../Icons/instagram.png"></i></a>
+    
+                    </div>
+    
+                </div>
+    
+            </footer>
+
+    </section>
+
+    <a class="gotoupbtn" href="#"> <i class="fas fa-arrow-up" ></i> </a>
+
+        <script>
+            function showDescription(image){
+                document.getElementById("image").src = image.src;
+                var info = image.alt;
+                var text;
+                if (info=="Waterbear"){
+                    text = "Tardigrades are a phylum of water-dwelling, eight-legged, segmented micro-animals. They were first described by the German zoologist Johann August Ephraim Goeze in 1773, who gave them the name of 'little water bears'. The name Tardigrada was given in 1777 by the Italian biologist Lazzaro Spallanzani.";
+                }else if(info=="baobab"){
+                    text = "When natural light reflects through a glass prism, the different colors of light, from red to violet, each get bent at slightly different angles. Red gets bent the least, violet the most. This causes the colors to fan out and become distinct.";
+                }else if(info=="rafflesia"){
+                    text = "This is our take of a popular chemical experiment showing the wonder of chemistry. The reaction occurred when a piece of metal salt was dropped in water glass (water solution of sodium silicate, Na2SiO3). The salt began to grow and generate many interesting forms due to the formation of water-permeable metal silicate membranes and osmotic effects.";
+                }else if(info=="Hillier"){
+                    text = "SpaceX has launched its 50th Falcon 9 Rocket, with the largest satellite payload the firm has sent into space so far. The rocket was launched from the Kennedy Space Centre, at Cape Canaveral Air Force Station, on Tuesday 12:33 am EST. It was carrying a six-ton Hispasat Spanish-language communications satellite that’s “almost the size of a city bus,” according to Elon Musk, SpaceX CEO and founder.";
+                }else if(info=="Tardigrades"){
+                    text = "This is is NAO. It's basically a humanoid robot. This one, measuring 58 centimeters, is absolutely programmable, it is interactive and, in addition, it is permanently in the process of evolution.";
+                }
+                document.getElementById("description").innerHTML = text;
+            }
+
+            function changeColor(){
+                var color = document.getElementById("bgcolors").value;
+                if(color=="white"){
+                    document.getElementById("container1").style.backgroundColor = "#FFFFFF";
+                }else if(color=="yellow"){
+                    document.getElementById("container1").style.backgroundColor = "#FFFF75";
+                }else if(color=="green"){
+                    document.getElementById("container1").style.backgroundColor = "#B2FF97";
+                }else if(color=="pink"){
+                    document.getElementById("container1").style.backgroundColor = "#FF9E9E";
+                }else if(color=="blue"){
+                    document.getElementById("container1").style.backgroundColor = "#A3A3FF";
+                }
+            }
+
+            function changeFont(){
+                var color = document.getElementById("fontcolor").value;
+                if(color=="black"){
+                    document.getElementById("container1").style.color = "#000000";
+                }else if(color=="gray"){
+                    document.getElementById("container1").style.color = "#404040";
+                }else if(color=="brown"){
+                    document.getElementById("container1").style.color = "#5E3131";
+                }else if(color=="purple"){
+                    document.getElementById("container1").style.color = "#700070";
+                }
+            }
+        </script>
+    </body>
+</html>
