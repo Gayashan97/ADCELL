@@ -4,7 +4,7 @@ function listStoreItems() {
     storeItems.forEach(function (product) {
         storeItemsHTML += `
             <div class="store-item">
-                <div class="image" style="background-image: url('../images/products/${product.id}.jpg')"></div>
+                <div class="image" style="background-image: url('../Images/products/${product.id}.jpg')"></div>
                 <div class="details">
                     <div class="description">
                         ${product.name}
