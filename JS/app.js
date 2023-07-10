@@ -58,7 +58,7 @@ function showScores() {
 
 // create questions
 var questions = [
-    new Question("This picture shows an object in space that has an icy core with a tail of gas and dust that extends millions of miles. What is this?", ["A star","A comet","An asteroid","A moon"], "A comet","../Images/Q1.png"),
+    new Question("This picture shows an object in space that has an icy core with a tail of gas and dust that extends millions of miles. What is this?", ["A star","A comet","An asteroid","A moon"], "A comet","../Images/Q1.PNG"),
     new Question("Who invented the periodic table?", ["Ernest Rutherford","James Neutron","Dmitri Mendeleev","Albert Einstein"], "Dmitri Mendeleev","../Images/Q2.png"),
     new Question("Which is the most abundant gas in the earth's atmosphere?", ["Nitrogen","Oxygen","Carbon Dioxide","Hydrogen"], "Nitrogen", "../Images/Q3.png"),
     new Question("What is the study of insects called?", ["Oncology","Entomology","Theology","Petrology"], "Entomology", "../Images/Q4.png"),
